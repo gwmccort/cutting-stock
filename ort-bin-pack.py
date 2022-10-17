@@ -1,3 +1,4 @@
+import random
 from ortools.linear_solver import pywraplp
 ''' src: https://developers.google.com/optimization/bin/bin_packing#complete_programs '''
 
@@ -5,11 +6,13 @@ from ortools.linear_solver import pywraplp
 def create_data_model():
     """Create the data for the example."""
     data = {}
-    weights = [48, 30, 19, 36, 36, 27, 42, 42, 36, 24, 30]
+    # weights = [48, 30, 19, 36, 36, 27, 42, 42, 36, 24, 30]
+    weights = [random.randrange(1, 10, 1) for i in range(50)]
     data['weights'] = weights
     data['items'] = list(range(len(weights)))
     data['bins'] = data['items']
-    data['bin_capacity'] = 100
+    # data['bin_capacity'] = 100
+    data['bin_capacity'] = 10
     return data
 
 
