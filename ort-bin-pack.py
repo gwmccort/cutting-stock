@@ -7,7 +7,8 @@ def create_data_model():
     """Create the data for the example."""
     data = {}
     # weights = [48, 30, 19, 36, 36, 27, 42, 42, 36, 24, 30]
-    weights = [random.randrange(1, 10, 1) for i in range(50)]
+    weights = [random.randrange(1, 10, 1) for i in range(40)]
+    print('weights:', weights)
     data['weights'] = weights
     data['items'] = list(range(len(weights)))
     data['bins'] = data['items']
