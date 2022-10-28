@@ -1,2 +1,4 @@
 .idea/**
 venv/**
+.idea/cutting-stock.iml
+.idea/misc.xml
